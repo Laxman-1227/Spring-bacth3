@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+    
+    
+<bean id="emp" class="com.test.bean.Employee">
+
+<constructor-arg value="ALex" type="String" />
+<constructor-arg value="100" type="int" />
+<constructor-arg value="222222" type="double" />
+<constructor-arg  ref="address"/>
+
+</bean>
+   
+   
+   <bean id="user" class="com.test.bean.User">
+    <property name="name" value="Alex"></property>
+   <property name="id" value="102"></property>
+   <property name="address" value="Hyd"></property>
+</bean>
+
+
+<bean id="address" class="com.test.bean.Address">
+<constructor-arg value="Kukatpally" type="String" />
+<constructor-arg value="2-22-3" type="String" />
+<constructor-arg value="500072" type="String" />
+
+</bean>
+
+</beans>
